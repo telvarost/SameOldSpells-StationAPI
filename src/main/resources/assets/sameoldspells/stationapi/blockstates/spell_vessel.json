@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sameoldspells:block/spell_vessel_model"
+    }
+  }
+}

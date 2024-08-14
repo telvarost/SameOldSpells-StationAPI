@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sameoldspells:block/dark_spell_model"
+    }
+  }
+}

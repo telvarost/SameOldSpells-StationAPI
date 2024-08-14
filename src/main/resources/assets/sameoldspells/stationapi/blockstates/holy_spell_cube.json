@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sameoldspells:block/holy_spell_cube_model"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sameoldspells:block/fire_spell_cube"
+  }
+}

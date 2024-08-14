@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "sameoldspells",
+  "version": "${version}",
+
+  "name": "SameOldSpells",
+  "description": "Some simple spells that probably have a variant in other mods as well. Special credit to Rocetti/kcilds for nearly all of the tile art.",
+  "authors": [
+    "Telvarost"
+  ],
+  "contact": {
+    "issues": "https://github.com/telvarost/SameOldSpells-StationAPI/issues",
+    "homepage": "https://github.com/telvarost/SameOldSpells-StationAPI/",
+    "sources": "https://github.com/telvarost/SameOldSpells-StationAPI/"
+  },
+
+  "license": "MIT",
+  "icon": "assets/sameoldspells/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+      "com.github.telvarost.sameoldspells.events.init.BlockListener",
+      "com.github.telvarost.sameoldspells.events.init.RecipeListener"
+    ],
+    "stationapi:event_bus_client": [
+    ],
+    "stationapi:event_bus_server": [
+    ],
+    "gcapi": [
+      "com.github.telvarost.sameoldspells.Config"
+    ]
+  },
+  "mixins": [
+    "sameoldspells.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}

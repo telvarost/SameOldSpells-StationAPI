@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sameoldspells:block/light_spell_cube_model"
+    }
+  }
+}
