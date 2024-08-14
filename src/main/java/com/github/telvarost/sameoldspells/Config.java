@@ -15,7 +15,7 @@ public class Config {
         public RenderSpellBlocksConfig RENDER_SPELLS_CONFIG = new RenderSpellBlocksConfig();
 
         @ConfigName("Enable Spell Recipes")
-        @Comment("Reload world for changes to take effect")
+        @Comment("Restart required for changes to take effect")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean enableSpellRecipes = true;
