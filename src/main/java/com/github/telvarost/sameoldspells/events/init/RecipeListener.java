@@ -9,6 +9,9 @@ import net.modificationstation.stationapi.api.event.recipe.RecipeRegisterEvent;
 import net.modificationstation.stationapi.api.recipe.CraftingRegistry;
 import net.modificationstation.stationapi.api.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import static com.github.telvarost.sameoldspells.events.init.BlockListener.*;
 
 public class RecipeListener {
@@ -26,8 +29,19 @@ public class RecipeListener {
 
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
             if (Config.config.enableSpellRecipes) {
-                CraftingRegistry.addShapelessRecipe(new ItemStack(Block.FIRE.asItem() , 3) , Item.FLINT_AND_STEEL);
-                CraftingRegistry.addShapelessRecipe(new ItemStack(FIRE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.FIRE);
+
+                if (Config.config.RECIPES_CONFIG.enableFireCrafting) {
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(Block.FIRE.asItem() , 3) , Item.FLINT_AND_STEEL);
+                }
+                if (Config.config.RECIPES_CONFIG.fireSpellUsesFlintAndSteel) {
+                    for (int i = 1; i <= 3; i++) {
+                        var vessels = new ArrayList<Object>(Collections.nCopies(i, SPELL_VESSEL));
+                        vessels.add(Item.FLINT_AND_STEEL);
+                        CraftingRegistry.addShapelessRecipe(new ItemStack(FIRE_SPELL.asItem(), i), vessels.toArray());
+                    }
+                } else {
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(FIRE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.FIRE);
+                }
                 CraftingRegistry.addShapelessRecipe(new ItemStack(DARK_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.OBSIDIAN);
                 CraftingRegistry.addShapelessRecipe(new ItemStack(LIGHT_SPELL.asItem(), 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.GLOWSTONE);
                 CraftingRegistry.addShapelessRecipe(new ItemStack(ROCK_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.IRON_BLOCK);

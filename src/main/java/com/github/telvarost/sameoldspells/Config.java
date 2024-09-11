@@ -19,6 +19,25 @@ public class Config {
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean enableSpellRecipes = true;
+
+        @ConfigCategory("Recipes Config")
+        @Comment("If the recipes are enabled, this is for configuring details about them")
+        public RecipesConfig RECIPES_CONFIG = new RecipesConfig();
+    }
+
+    public static class RecipesConfig {
+
+        @ConfigName("Allow Fire Crafting")
+        @Comment("Restart required for changes to take effect.")
+        @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean enableFireCrafting = true;
+
+        @ConfigName("Fire Spell Uses Flint And Steel")
+        @Comment("Restart required for changes to take effect.")
+        @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean fireSpellUsesFlintAndSteel = false;
     }
 
     public static class RenderSpellBlocksConfig {
