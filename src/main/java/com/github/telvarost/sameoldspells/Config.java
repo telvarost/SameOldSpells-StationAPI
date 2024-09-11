@@ -29,43 +29,43 @@ public class Config {
         @ConfigName("Render Arrow Spell")
         public Boolean ARROW_SPELL = true;
 
-        @ConfigName("Render Dark Block")
+        @ConfigName("Render Dark Spell Cube")
         public Boolean DARK_SPELL_CUBE = true;
 
         @ConfigName("Render Dark Spell")
         public Boolean DARK_SPELL = true;
 
-        @ConfigName("Render Fire Block")
+        @ConfigName("Render Fire Spell Cube")
         public Boolean FIRE_SPELL_CUBE = true;
 
         @ConfigName("Render Fire Spell")
         public Boolean FIRE_SPELL = true;
 
-        @ConfigName("Render Grass Block")
+        @ConfigName("Render Grass Spell Cube")
         public Boolean GRASS_SPELL_CUBE= true;
 
         @ConfigName("Render Grass Spell")
         public Boolean GRASS_SPELL= true;
 
-        @ConfigName("Render Holy Block")
+        @ConfigName("Render Holy Spell Cube")
         public Boolean HOLY_SPELL_CUBE = true;
 
         @ConfigName("Render Holy Spell")
         public Boolean HOLY_SPELL = true;
 
-        @ConfigName("Render Light Block")
+        @ConfigName("Render Light Spell Cube")
         public Boolean LIGHT_SPELL_CUBE= true;
 
         @ConfigName("Render Light Spell")
         public Boolean LIGHT_SPELL= true;
 
-        @ConfigName("Render Rock Block")
+        @ConfigName("Render Rock Spell Cube")
         public Boolean ROCK_SPELL_CUBE = true;
 
         @ConfigName("Render Rock Spell")
         public Boolean ROCK_SPELL = true;
 
-        @ConfigName("Render Water Block")
+        @ConfigName("Render Water Spell Cube")
         public Boolean WATER_SPELL_CUBE= true;
 
         @ConfigName("Render Water Spell")
