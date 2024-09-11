@@ -9,22 +9,41 @@ Note that all changes can be individually disabled using GlassConfigAPI if undes
 ### Same Old Spells
 
 Adds a couple unique spells to the game that are activated on entity collision:
-- arrow_spell
-- dark_spell
-- dark_spell_cube
-- fire_spell
-- fire_spell_cube
-- grass_spell
-- grass_spell_cube
-- holy_spell
-- holy_spell_cube
-- light_spell
-- light_spell_cube
-- spell_vessel
-- rock_spell
-- rock_spell_cube
-- water_spell
-- water_spell_cube
+- Arrow Spell: Fires an arrow in each cardinal direction (North, East, South, and West)
+  - Single use, crafted from 1x spell vessel and 4x arrows
+  - Crafting recipe is shaped with spell vessel in the center and arrows placed vertically and horizontally beside it
+- Dark Spell: Makes night begin
+  - Single use, crafted from 1x spell vessel and 1x obsidian
+- Dark Spell Cube: Makes it midnight
+  - Infinite use, NOT craft-able
+- Fire Spell: Sets an entity on fire
+  - Single use, crafted from 1x spell vessel and 1x fire
+  - Fire is now craft-able via placing UNUSED flint and steel in the crafting grid (recipe output is 3x fire)
+- Fire Spell Cube: Sets an entity on fire only while in the spell cube
+  - Infinite use, NOT craft-able
+- Grass Spell: Clears the weather
+  - Single use, crafted from 1x spell vessel and 1x dandelion (Vanilla b1.7.3 Minecraft just calls this item "Flower")
+- Grass Spell Cube: Clears the weather
+  - Infinite use, NOT craft-able
+- Holy Spell: Spawns lightning
+  - Single use, crafted from 1x spell vessel and 1x bookshelf
+- Holy Spell Cube: Spawns lightning
+  - Infinite use, NOT craft-able
+- Light Spell: Makes daytime begin
+  - Single use, crafted from 1x spell vessel and 1x glowstone
+- Light Spell Cube: Makes it midday
+  - Infinite use, NOT craft-able
+- Spell Vessel: Does nothing
+  - Single use, crafted from 1x glowstone dust and 4x snow blocks
+  - Crafting recipe is shaped with glowstone dust in the center and snow blocks placed vertically and horizontally beside it
+- Rock Spell: Starts a thunderstorm
+  - Single use, crafted from 1x spell vessel and 1x iron block
+- Rock Spell Cube: Starts a thunderstorm
+  - Infinite use, NOT craft-able
+- Water Spell: Starts rain
+  - Single use, crafted from 1x spell vessel and 1x lapis lazuli block
+- Water Spell Cube: Starts rain
+  - Infinite use, NOT craft-able
 
 ## Installation using Prism Launcher
 
