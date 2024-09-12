@@ -14,27 +14,27 @@ public class Config {
         @Comment("Reload world for changes to take effect")
         public RenderSpellBlocksConfig RENDER_SPELLS_CONFIG = new RenderSpellBlocksConfig();
 
-        @ConfigName("Enable Spell Recipes")
+        @ConfigCategory("Mod Recipes Config")
         @Comment("Restart required for changes to take effect")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
-        public Boolean enableSpellRecipes = true;
-
-        @ConfigCategory("Recipes Config")
-        @Comment("If the recipes are enabled, this is for configuring details about them")
         public RecipesConfig RECIPES_CONFIG = new RecipesConfig();
     }
 
     public static class RecipesConfig {
 
-        @ConfigName("Allow Fire Crafting")
-        @Comment("Restart required for changes to take effect.")
+        @ConfigName("Enable Spell Recipes")
+        @Comment("Whether spells can be crafted or not")
+        @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean enableSpellRecipes = true;
+
+        @ConfigName("Enable Fire Crafting")
+        @Comment("Allows crafting flint and steel into fire")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean enableFireCrafting = true;
 
-        @ConfigName("Fire Spell Uses Flint And Steel")
-        @Comment("Restart required for changes to take effect.")
+        @ConfigName("Craft Fire Spell With Flint And Steel")
+        @Comment("Fire spell uses fire block by default")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean fireSpellUsesFlintAndSteel = false;

@@ -14,3 +14,5 @@ tile.@.rock_spell_cube.name=Rock Spell Cube
 tile.@.rock_spell.name=Rock Spell
 tile.@.water_spell_cube.name=Water Spell Cube
 tile.@.water_spell.name=Water Spell
+
+tab.@.spell_vessel.name=SameOldSpells Spells

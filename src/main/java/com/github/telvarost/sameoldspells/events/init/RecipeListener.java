@@ -21,18 +21,18 @@ public class RecipeListener {
         Identifier type = event.recipeId;
 
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED.type()) {
-            if (Config.config.enableSpellRecipes) {
+            if (Config.config.RECIPES_CONFIG.enableSpellRecipes) {
                 CraftingRegistry.addShapedRecipe(new ItemStack(SPELL_VESSEL.asItem(), 1), " X ", "XYX", " X ", 'X', Block.SNOW_BLOCK, 'Y', Item.GLOWSTONE_DUST);
                 CraftingRegistry.addShapedRecipe(new ItemStack(ARROW_SPELL.asItem(), 1), " X ", "XYX", " X ", 'X', Item.ARROW, 'Y', new ItemStack(SPELL_VESSEL.asItem()));
             }
         }
 
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
-            if (Config.config.enableSpellRecipes) {
-
+            if (Config.config.RECIPES_CONFIG.enableSpellRecipes) {
                 if (Config.config.RECIPES_CONFIG.enableFireCrafting) {
                     CraftingRegistry.addShapelessRecipe(new ItemStack(Block.FIRE.asItem() , 3) , Item.FLINT_AND_STEEL);
                 }
+
                 if (Config.config.RECIPES_CONFIG.fireSpellUsesFlintAndSteel) {
                     for (int i = 1; i <= 3; i++) {
                         var vessels = new ArrayList<Object>(Collections.nCopies(i, SPELL_VESSEL));
@@ -42,6 +42,7 @@ public class RecipeListener {
                 } else {
                     CraftingRegistry.addShapelessRecipe(new ItemStack(FIRE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.FIRE);
                 }
+
                 CraftingRegistry.addShapelessRecipe(new ItemStack(DARK_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.OBSIDIAN);
                 CraftingRegistry.addShapelessRecipe(new ItemStack(LIGHT_SPELL.asItem(), 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.GLOWSTONE);
                 CraftingRegistry.addShapelessRecipe(new ItemStack(ROCK_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.IRON_BLOCK);

@@ -14,6 +14,7 @@ import static net.minecraft.block.Block.*;
 
 public class BlockListener {
 
+    public static Block[] blocks;
     public static Block ARROW_SPELL;
     public static Block DARK_SPELL_CUBE;
     public static Block DARK_SPELL;
@@ -53,6 +54,25 @@ public class BlockListener {
         WATER_SPELL_CUBE   = new WaterSpellCube  (Identifier.of(NAMESPACE, "water_spell_cube"  ), Material.GLASS).setHardness(0.25F).setSoundGroup(GLASS_SOUND_GROUP).setTranslationKey(NAMESPACE, "water_spell_cube"   );
         WATER_SPELL        = new WaterSpell      (Identifier.of(NAMESPACE, "water_spell"       ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(NAMESPACE, "water_spell"     );
         SPELL_VESSEL       = new SpellVessel     (Identifier.of(NAMESPACE, "spell_vessel"      ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(NAMESPACE, "spell_vessel"    );
+
+        blocks = new Block[]
+        {   ARROW_SPELL     
+        ,   DARK_SPELL_CUBE 
+        ,   DARK_SPELL      
+        ,   FIRE_SPELL_CUBE 
+        ,   FIRE_SPELL      
+        ,   GRASS_SPELL_CUBE
+        ,   GRASS_SPELL     
+        ,   HOLY_SPELL_CUBE 
+        ,   HOLY_SPELL      
+        ,   LIGHT_SPELL_CUBE
+        ,   LIGHT_SPELL     
+        ,   ROCK_SPELL_CUBE 
+        ,   ROCK_SPELL      
+        ,   WATER_SPELL_CUBE
+        ,   WATER_SPELL     
+        ,   SPELL_VESSEL    
+        };
     }
 }
 

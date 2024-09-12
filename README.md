@@ -6,20 +6,20 @@ Some basic world control using spells!
 ## List of changes
 Note that all changes can be individually disabled using GlassConfigAPI if undesired
 
-### Same Old Spells
+### Same Old Spells[SameOldSpells-1.1.0.jar](build/libs/SameOldSpells-1.1.0.jar)
 
 Adds a couple unique spells to the game that are activated on entity collision:
 - Arrow Spell: Fires an arrow in each cardinal direction (North, East, South, and West)
   - Single use, crafted from 1x spell vessel and 4x arrows
   - Crafting recipe is shaped with spell vessel in the center and arrows placed vertically and horizontally beside it
-- Dark Spell: Makes night begin
-  - Single use, crafted from 1x spell vessel and 1x obsidian
+- Dark Spell: Makes night begin[SameOldSpells-1.1.0.jar](build/libs/SameOldSpells-1.1.0.jar)
+  - Single use, crafted from 1x spell vessel and 1x obsidian[SameOldSpells-1.1.0.jar](build/libs/SameOldS[SameOldSpells-1.1.0.jar](build/libs/SameOldSpells-1.1.0.jar)pells-1.1.0.jar)
 - Dark Spell Cube: Makes it midnight
   - Infinite use, NOT craft-able
 - Fire Spell: Sets an entity on fire
   - Single use, crafted from 1x spell vessel and 1x fire
   - Fire is now craft-able via placing UNUSED flint and steel in the crafting grid (recipe output is 3x fire)
-  - Configuration available to craft it directly from 1 to 3 spell vessels and 1x unused flint and steel
+  - Configuration available to craft it directly from 1-3x spell vessels and 1x unused flint and steel (output is 1-3x fire spells)
 - Fire Spell Cube: Sets an entity on fire only while in the spell cube
   - Infinite use, NOT craft-able
 - Grass Spell: Clears the weather
