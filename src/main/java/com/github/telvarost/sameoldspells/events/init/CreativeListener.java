@@ -8,14 +8,14 @@ import paulevs.bhcreative.api.SimpleTab;
 import paulevs.bhcreative.registry.TabRegistryEvent;
 
 public class CreativeListener {
-    public static CreativeTab tabFishinFoodTweaksFish;
+    public static CreativeTab tabSameOldSpellsSpells;
 
     @EventListener
     public void onTabInit(TabRegistryEvent event){
-        tabFishinFoodTweaksFish = new SimpleTab(BlockListener.NAMESPACE.id("spell_vessel"), BlockListener.SPELL_VESSEL.asItem());
-        event.register(tabFishinFoodTweaksFish);
+        tabSameOldSpellsSpells = new SimpleTab(BlockListener.NAMESPACE.id("spell_vessel"), BlockListener.SPELL_VESSEL.asItem());
+        event.register(tabSameOldSpellsSpells);
         for (Block block : BlockListener.blocks){
-            tabFishinFoodTweaksFish.addItem(new ItemStack(block.asItem(), 1));
+            tabSameOldSpellsSpells.addItem(new ItemStack(block.asItem(), 1));
         }
     }
 }
