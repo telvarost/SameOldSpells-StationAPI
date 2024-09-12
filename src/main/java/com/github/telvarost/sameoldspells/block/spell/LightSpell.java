@@ -72,7 +72,7 @@ public class LightSpell extends TemplateBlock {
                 world.setBlock(x, y, z, 0);
                 world.method_215(x, y, z, 0);
 
-                /** - Advance time to day and freeze */
+                /** - Advance time to day */
                 long l = worldProperties.getTime();
                 if (24000L < l) {
                     worldProperties.setTime(l - (l % 24000L) + 23500L);

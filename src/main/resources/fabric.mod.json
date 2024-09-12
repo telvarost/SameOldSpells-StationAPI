@@ -29,6 +29,9 @@
     ],
     "gcapi": [
       "com.github.telvarost.sameoldspells.Config"
+    ],
+    "bhcreative:event_bus": [
+      "com.github.telvarost.sameoldspells.events.init.CreativeListener"
     ]
   },
   "mixins": [

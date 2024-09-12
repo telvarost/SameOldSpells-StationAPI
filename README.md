@@ -19,7 +19,7 @@ Adds a couple unique spells to the game that are activated on entity collision:
 - Fire Spell: Sets an entity on fire
   - Single use, crafted from 1x spell vessel and 1x fire
   - Fire is now craft-able via placing UNUSED flint and steel in the crafting grid (recipe output is 3x fire)
-  - Configuration available to craft it directly from 1 to 3 spell vessels and 1x unused flint and steel
+  - Configuration available to craft it directly from 1-3x spell vessels and 1x unused flint and steel (output is 1-3x fire spells)
 - Fire Spell Cube: Sets an entity on fire only while in the spell cube
   - Infinite use, NOT craft-able
 - Grass Spell: Clears the weather

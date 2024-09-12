@@ -75,6 +75,12 @@ dependencies {
 
 	modImplementation "net.modificationstation:StationAPI:${project.stapi_version}"
 
+	// Mod Compat
+	// Beta Horizons Creative
+	modImplementation("com.github.paulevsGitch:BHCreative:${project.bhcreative_version}"){
+		transitive false
+	}
+
 	// Optional, but convenient mods for mod creators and users alike.
 	modImplementation("com.github.DanyGames2014:spawneggs:55a2b88f20") {
 		transitive false
@@ -86,9 +92,6 @@ dependencies {
 		transitive false
 	}
 	modImplementation("net.glasslauncher:HowManyItems-Fabric-Unofficial:${project.howmanyitems_version}") {
-		transitive false
-	}
-	modImplementation ("com.github.paulevsGitch:BHCreative:${project.bhcreative_version}"){
 		transitive false
 	}
 }
