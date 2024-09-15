@@ -46,6 +46,11 @@ Adds a couple unique spells to the game that are activated on entity collision:
 - Water Spell Cube: Starts rain
   - Infinite use, NOT craft-able
 
+## Special thanks to Rocetti/kcilds for the tile art <3
+
+Find their original post at OpenGameArt.org here:
+[https://opengameart.org/content/universal-fantasy-roguelike-tileset-16x16](https://opengameart.org/content/universal-fantasy-roguelike-tileset-16x16)
+
 ## Installation using Prism Launcher
 
 1. Download an instance of Babric for Prism Launcher: https://github.com/babric/prism-instance
