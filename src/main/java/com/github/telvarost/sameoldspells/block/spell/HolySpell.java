@@ -1,10 +1,11 @@
 package com.github.telvarost.sameoldspells.block.spell;
 
+import com.github.telvarost.sameoldspells.ClientUtil;
 import com.github.telvarost.sameoldspells.Config;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.util.math.Box;
@@ -65,7 +66,13 @@ public class HolySpell extends TemplateBlock {
 
     @Override
     public void onEntityCollision(World world, int x, int y, int z, Entity entity) {
-        if (null != entity && !(entity instanceof Particle)) {
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            if (ClientUtil.IsParticle(entity)) {
+                return;
+            }
+        }
+
+        if (null != entity) {
             world.setBlock(x, y, z, 0);
             world.method_215(x, y, z, 0);
 
