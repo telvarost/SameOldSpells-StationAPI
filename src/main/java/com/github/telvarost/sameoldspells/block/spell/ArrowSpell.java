@@ -78,21 +78,21 @@ public class ArrowSpell extends TemplateBlock {
             WorldProperties worldProperties = ((WorldAccessor) world).getProperties();
             if (null != worldProperties) {
                 world.setBlock(x, y, z, 0);
-                world.method_215(x, y, z, 0);
+                world.setBlockMeta(x, y, z, 0);
 
                 /** - Summon arrows */
                 ArrowEntity arrowEast = new ArrowEntity(world, (x + 0.5D) + 1, (y + 0.5D), (z + 0.5D));
                 arrowEast.velocityX = 0.5;
-                world.method_210(arrowEast);
+                world.spawnEntity(arrowEast);
                 ArrowEntity arrowWest = new ArrowEntity(world, (x + 0.5D) - 1, (y + 0.5D), (z + 0.5D));
                 arrowWest.velocityX = -0.5;
-                world.method_210(arrowWest);
+                world.spawnEntity(arrowWest);
                 ArrowEntity arrowNorth = new ArrowEntity(world, (x + 0.5D), (y + 0.5D), (z + 0.5D) + 1);
                 arrowNorth.velocityZ = 0.5;
-                world.method_210(arrowNorth);
+                world.spawnEntity(arrowNorth);
                 ArrowEntity arrowSouth = new ArrowEntity(world, (x + 0.5D), (y + 0.5D), (z + 0.5D) - 1);
                 arrowSouth.velocityZ = -0.5;
-                world.method_210(arrowSouth);
+                world.spawnEntity(arrowSouth);
             }
         }
     }

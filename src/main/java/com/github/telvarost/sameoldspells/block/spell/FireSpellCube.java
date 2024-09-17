@@ -72,7 +72,7 @@ public class FireSpellCube extends TemplateBlock {
         }
 
         if (null != entity) {
-            entity.fire = 20;
+            entity.fireTicks = 20;
         }
     }
 }

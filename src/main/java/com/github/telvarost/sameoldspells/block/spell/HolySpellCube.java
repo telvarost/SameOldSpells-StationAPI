@@ -76,9 +76,9 @@ public class HolySpellCube extends TemplateBlock {
         if (null != entity) {
             int lastEventState = world.getBlockMeta(x, y, z);
             if (ModHelper.ModHelperFields.eventCounter != lastEventState) {
-                world.method_215(x, y, z, ModHelper.ModHelperFields.eventCounter);
+                world.setBlockMeta(x, y, z, ModHelper.ModHelperFields.eventCounter);
                 LightningEntity lightning = new LightningEntity(world, x, y, z);
-                world.method_210(lightning);
+                world.spawnEntity(lightning);
             }
         }
     }

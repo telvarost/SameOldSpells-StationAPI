@@ -73,8 +73,8 @@ public class FireSpell extends TemplateBlock {
 
         if (null != entity) {
             world.setBlock(x, y, z, 0);
-            world.method_215(x, y, z, 0);
-            entity.fire = 300;
+            world.setBlockMeta(x, y, z, 0);
+            entity.fireTicks = 300;
         }
     }
 }

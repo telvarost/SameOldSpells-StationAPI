@@ -75,7 +75,7 @@ public class WaterSpell extends TemplateBlock {
         if (null != entity) {
             if (null != ((WorldAccessor) world).getProperties()) {
                 world.setBlock(x, y, z, 0);
-                world.method_215(x, y, z, 0);
+                world.setBlockMeta(x, y, z, 0);
                 ((WorldAccessor) world).getProperties().setThundering(false);
                 ((WorldAccessor) world).getProperties().setRaining(true);
             }

@@ -74,11 +74,12 @@ public class HolySpell extends TemplateBlock {
 
         if (null != entity) {
             world.setBlock(x, y, z, 0);
-            world.method_215(x, y, z, 0);
+            world.setBlockMeta(x, y, z, 0);
 
             /** Summon lightning */
             LightningEntity lightning = new LightningEntity(world, x, y, z);
-            world.method_210(lightning);
+            lightning.setPositionAndAngles(x, y, z, 0.0F, 0.0F);
+            world.spawnEntity(lightning);
         }
     }
 }

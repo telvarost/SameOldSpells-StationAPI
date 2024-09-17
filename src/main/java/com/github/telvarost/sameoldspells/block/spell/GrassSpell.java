@@ -77,7 +77,7 @@ public class GrassSpell extends TemplateBlock {
             WorldProperties worldProperties = ((WorldAccessor) world).getProperties();
             if (null != worldProperties) {
                 world.setBlock(x, y, z, 0);
-                world.method_215(x, y, z, 0);
+                world.setBlockMeta(x, y, z, 0);
 
                 worldProperties.setThundering(false);
                 worldProperties.setRaining(false);
