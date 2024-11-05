@@ -55,7 +55,7 @@ public class WaterSpell extends TemplateBlock {
     }
 
     @Override
-    public boolean isSolidBlock(BlockView blockView, int x, int y, int z, int i) {
+    public boolean isSolidFace(BlockView blockView, int x, int y, int z, int face) {
         return false;
     }
 

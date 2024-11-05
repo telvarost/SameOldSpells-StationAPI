@@ -1,96 +1,104 @@
 package com.github.telvarost.sameoldspells;
 
-import blue.endless.jankson.Comment;
-import net.glasslauncher.mods.api.gcapi.api.*;
+import net.glasslauncher.mods.gcapi3.api.*;
 
 public class Config {
 
-    @GConfig(value = "config", visibleName = "SameOldSpells")
+    @ConfigRoot(value = "config", visibleName = "SameOldSpells")
     public static ConfigFields config = new ConfigFields();
 
     public static class ConfigFields {
 
-        @ConfigCategory("Render Spell Blocks Config")
-        @Comment("Reload world for changes to take effect")
+        @ConfigCategory(
+                name = "Render Spell Blocks Config",
+                description = "Reload world for changes to take effect"
+        )
         public RenderSpellBlocksConfig RENDER_SPELLS_CONFIG = new RenderSpellBlocksConfig();
 
-        @ConfigCategory("Mod Recipes Config")
-        @Comment("Restart required for changes to take effect")
+        @ConfigCategory(
+                name = "Mod Recipes Config",
+                description = "Restart required for changes to take effect"
+        )
         public RecipesConfig RECIPES_CONFIG = new RecipesConfig();
     }
 
     public static class RecipesConfig {
 
-        @ConfigName("Enable Spell Recipes")
-        @Comment("Whether spells can be crafted or not")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Enable Spell Recipes",
+                description = "Whether spells can be crafted or not",
+                multiplayerSynced = true
+        )
         public Boolean enableSpellRecipes = true;
 
-        @ConfigName("Enable Fire Crafting")
-        @Comment("Allows crafting flint and steel into fire")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Enable Fire Crafting",
+                description = "Allows crafting flint and steel into fire",
+                multiplayerSynced = true
+        )
         public Boolean enableFireCrafting = true;
 
-        @ConfigName("Craft Fire Spell With Flint And Steel")
-        @Comment("Fire spell uses fire block by default")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Craft Fire Spell With Flint And Steel",
+                description = "Fire spell uses fire block by default",
+                multiplayerSynced = true
+        )
         public Boolean fireSpellUsesFlintAndSteel = false;
     }
 
     public static class RenderSpellBlocksConfig {
-        @ConfigName("Disable All Spell Block Rendering")
-        @Comment("Overrides individual toggles when true")
+        @ConfigEntry(
+                name = "Disable All Spell Block Rendering",
+                description = "Overrides individual toggles when true"
+        )
         public Boolean DISABLE_ALL_SPELL_RENDERING = false;
 
-        @ConfigName("Render Arrow Spell")
+        @ConfigEntry(name = "Render Arrow Spell")
         public Boolean ARROW_SPELL = true;
 
-        @ConfigName("Render Dark Spell Cube")
+        @ConfigEntry(name = "Render Dark Spell Cube")
         public Boolean DARK_SPELL_CUBE = true;
 
-        @ConfigName("Render Dark Spell")
+        @ConfigEntry(name = "Render Dark Spell")
         public Boolean DARK_SPELL = true;
 
-        @ConfigName("Render Fire Spell Cube")
+        @ConfigEntry(name = "Render Fire Spell Cube")
         public Boolean FIRE_SPELL_CUBE = true;
 
-        @ConfigName("Render Fire Spell")
+        @ConfigEntry(name = "Render Fire Spell")
         public Boolean FIRE_SPELL = true;
 
-        @ConfigName("Render Grass Spell Cube")
+        @ConfigEntry(name = "Render Grass Spell Cube")
         public Boolean GRASS_SPELL_CUBE= true;
 
-        @ConfigName("Render Grass Spell")
+        @ConfigEntry(name = "Render Grass Spell")
         public Boolean GRASS_SPELL= true;
 
-        @ConfigName("Render Holy Spell Cube")
+        @ConfigEntry(name = "Render Holy Spell Cube")
         public Boolean HOLY_SPELL_CUBE = true;
 
-        @ConfigName("Render Holy Spell")
+        @ConfigEntry(name = "Render Holy Spell")
         public Boolean HOLY_SPELL = true;
 
-        @ConfigName("Render Light Spell Cube")
+        @ConfigEntry(name = "Render Light Spell Cube")
         public Boolean LIGHT_SPELL_CUBE= true;
 
-        @ConfigName("Render Light Spell")
+        @ConfigEntry(name = "Render Light Spell")
         public Boolean LIGHT_SPELL= true;
 
-        @ConfigName("Render Rock Spell Cube")
+        @ConfigEntry(name = "Render Rock Spell Cube")
         public Boolean ROCK_SPELL_CUBE = true;
 
-        @ConfigName("Render Rock Spell")
+        @ConfigEntry(name = "Render Rock Spell")
         public Boolean ROCK_SPELL = true;
 
-        @ConfigName("Render Water Spell Cube")
+        @ConfigEntry(name = "Render Water Spell Cube")
         public Boolean WATER_SPELL_CUBE= true;
 
-        @ConfigName("Render Water Spell")
+        @ConfigEntry(name = "Render Water Spell")
         public Boolean WATER_SPELL= true;
 
-        @ConfigName("Render Spell Vessel")
+        @ConfigEntry(name = "Render Spell Vessel")
         public Boolean SPELL_VESSEL = true;
     }
 }
