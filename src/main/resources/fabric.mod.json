@@ -28,7 +28,7 @@
     ],
     "stationapi:event_bus_server": [
     ],
-    "gcapi": [
+    "gcapi3": [
       "com.github.telvarost.sameoldspells.Config"
     ],
     "bhcreative:event_bus": [
