@@ -1,5 +1,6 @@
 package com.github.telvarost.sameoldspells.events.init;
 
+import com.github.telvarost.sameoldspells.ModHelper;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -12,7 +13,7 @@ public class CreativeListener {
 
     @EventListener
     public void onTabInit(TabRegistryEvent event){
-        tabSameOldSpellsSpells = new SimpleTab(BlockListener.NAMESPACE.id("spell_vessel"), BlockListener.SPELL_VESSEL.asItem());
+        tabSameOldSpellsSpells = new SimpleTab(ModHelper.NAMESPACE.id("spell_vessel"), BlockListener.SPELL_VESSEL.asItem());
         event.register(tabSameOldSpellsSpells);
         for (Block block : BlockListener.blocks){
             tabSameOldSpellsSpells.addItem(new ItemStack(block.asItem(), 1));

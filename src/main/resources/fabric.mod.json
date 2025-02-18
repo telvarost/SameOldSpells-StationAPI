@@ -20,6 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
+      "com.github.telvarost.sameoldspells.ModHelper",
       "com.github.telvarost.sameoldspells.events.init.BlockListener",
       "com.github.telvarost.sameoldspells.events.init.RecipeListener"
     ],
@@ -40,8 +41,8 @@
 
   "depends": {
     "minecraft": "1.0.0-beta.7.3",
-    "gcapi3": ">=3.0.2",
-    "stationapi": "*"
+    "stationapi": ">=2.0.0-alpha.3",
+    "gcapi3": ">=3.0.2"
   },
 
   "recommends": {
