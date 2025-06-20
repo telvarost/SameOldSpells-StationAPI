@@ -22,6 +22,8 @@ public class BlockListener {
     public static Block GRASS_SPELL;
     public static Block HOLY_SPELL_CUBE;
     public static Block HOLY_SPELL;
+    public static Block ICE_SPELL_CUBE;
+    public static Block ICE_SPELL;
     public static Block LIGHT_SPELL_CUBE;
     public static Block LIGHT_SPELL;
     public static Block ROCK_SPELL_CUBE;
@@ -42,6 +44,8 @@ public class BlockListener {
         GRASS_SPELL        = new GrassSpell      (Identifier.of(ModHelper.NAMESPACE, "grass_spell"       ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "grass_spell"     );
         HOLY_SPELL_CUBE    = new HolySpellCube   (Identifier.of(ModHelper.NAMESPACE, "holy_spell_cube"   ), Material.GLASS).setHardness(0.25F).setSoundGroup(GLASS_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "holy_spell_cube"    );
         HOLY_SPELL         = new HolySpell       (Identifier.of(ModHelper.NAMESPACE, "holy_spell"        ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "holy_spell"      );
+        ICE_SPELL_CUBE     = new IceSpellCube    (Identifier.of(ModHelper.NAMESPACE, "ice_spell_cube"    ), Material.GLASS).setHardness(0.25F).setSoundGroup(GLASS_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "ice_spell_cube"     );
+        ICE_SPELL          = new IceSpell        (Identifier.of(ModHelper.NAMESPACE, "ice_spell"         ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "ice_spell"       );
         LIGHT_SPELL_CUBE   = new LightSpellCube  (Identifier.of(ModHelper.NAMESPACE, "light_spell_cube"  ), Material.GLASS).setHardness(0.25F).setSoundGroup(GLASS_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "light_spell_cube"   );
         LIGHT_SPELL        = new LightSpell      (Identifier.of(ModHelper.NAMESPACE, "light_spell"       ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "light_spell"     );
         ROCK_SPELL_CUBE    = new RockSpellCube   (Identifier.of(ModHelper.NAMESPACE, "rock_spell_cube"   ), Material.GLASS).setHardness(0.25F).setSoundGroup(GLASS_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "rock_spell_cube"    );
@@ -51,22 +55,24 @@ public class BlockListener {
         SPELL_VESSEL       = new SpellVessel     (Identifier.of(ModHelper.NAMESPACE, "spell_vessel"      ), Material.AIR  ).setSoundGroup(WOOL_SOUND_GROUP).setTranslationKey(ModHelper.NAMESPACE, "spell_vessel"    );
 
         blocks = new Block[]
-        {   ARROW_SPELL     
-        ,   DARK_SPELL_CUBE 
-        ,   DARK_SPELL      
-        ,   FIRE_SPELL_CUBE 
-        ,   FIRE_SPELL      
+        {   ARROW_SPELL
+        ,   DARK_SPELL_CUBE
+        ,   DARK_SPELL
+        ,   FIRE_SPELL_CUBE
+        ,   FIRE_SPELL
         ,   GRASS_SPELL_CUBE
-        ,   GRASS_SPELL     
-        ,   HOLY_SPELL_CUBE 
-        ,   HOLY_SPELL      
+        ,   GRASS_SPELL
+        ,   HOLY_SPELL_CUBE
+        ,   HOLY_SPELL
+        ,   ICE_SPELL_CUBE
+        ,   ICE_SPELL
         ,   LIGHT_SPELL_CUBE
-        ,   LIGHT_SPELL     
-        ,   ROCK_SPELL_CUBE 
-        ,   ROCK_SPELL      
+        ,   LIGHT_SPELL
+        ,   ROCK_SPELL_CUBE
+        ,   ROCK_SPELL
         ,   WATER_SPELL_CUBE
-        ,   WATER_SPELL     
-        ,   SPELL_VESSEL    
+        ,   WATER_SPELL
+        ,   SPELL_VESSEL
         };
     }
 }

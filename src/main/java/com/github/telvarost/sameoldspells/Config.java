@@ -39,11 +39,25 @@ public class Config {
         public Boolean enableFireCrafting = true;
 
         @ConfigEntry(
+                name = "Enable Ice Crafting",
+                description = "Allows crafting snow and water into ice",
+                multiplayerSynced = true
+        )
+        public Boolean enableIceCrafting = true;
+
+        @ConfigEntry(
                 name = "Craft Fire Spell With Flint And Steel",
                 description = "Fire spell uses fire block by default",
                 multiplayerSynced = true
         )
         public Boolean fireSpellUsesFlintAndSteel = false;
+
+        @ConfigEntry(
+                name = "Craft Ice Spell With Snow and Water",
+                description = "Ice spell uses ice block by default",
+                multiplayerSynced = true
+        )
+        public Boolean iceSpellUsesSnowAndWater = false;
     }
 
     public static class RenderSpellBlocksConfig {
@@ -79,6 +93,12 @@ public class Config {
 
         @ConfigEntry(name = "Render Holy Spell")
         public Boolean HOLY_SPELL = true;
+
+        @ConfigEntry(name = "Render Ice Spell Cube")
+        public Boolean ICE_SPELL_CUBE = true;
+
+        @ConfigEntry(name = "Render Ice Spell")
+        public Boolean ICE_SPELL = true;
 
         @ConfigEntry(name = "Render Light Spell Cube")
         public Boolean LIGHT_SPELL_CUBE= true;

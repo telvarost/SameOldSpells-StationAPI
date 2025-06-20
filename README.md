@@ -1,6 +1,7 @@
 # SameOldSpells StationAPI for Minecraft Beta 1.7.3
 
 Some basic world control using spells!
+* Requires [Zastavka API](https://modrinth.com/mod/zastavkaapi) (used for freeze effect with ice spells)
 * Mod works on Multiplayer with [GlassConfigAPI](https://modrinth.com/mod/glass-config-api) version 3.0+ used to sync configs!
 
 ## List of changes
@@ -30,6 +31,12 @@ Adds a couple unique spells to the game that are activated on entity collision:
   - Single use, crafted from 1x spell vessel and 1x bookshelf
 - Holy Spell Cube: Spawns lightning
   - Infinite use, NOT craft-able
+- Ice Spell: Freezes an entity
+  - Single use, crafted from 1x spell vessel and 1x ice
+  - Ice is now craft-able via placing 2x snow block and 1x water bucket in the crafting grid
+  - Configuration available to craft it directly from 2x snow block, 1x water bucket, and 1x spell vessel
+- Ice Spell Cube: Periodically freezes an entity in the spell cube
+  - Infinite use, NOT craft-able
 - Light Spell: Makes daytime begin
   - Single use, crafted from 1x spell vessel and 1x glowstone
 - Light Spell Cube: Makes it midday
@@ -58,9 +65,10 @@ Find their original post at OpenGameArt.org here:
 3. Add GlassConfigAPI 3.0.2+ to the mod folder for the instance: https://modrinth.com/mod/glass-config-api
 4. Add Glass Networking to the mod folder for the instance: https://modrinth.com/mod/glass-networking
 5. Add StationAPI to the mod folder for the instance: https://modrinth.com/mod/stationapi
-6. (Optional) Add Mod Menu to the mod folder for the instance: https://modrinth.com/mod/modmenu-beta
-7. Add this mod to the mod folder for the instance: https://github.com/telvarost/SameOldSpells-StationAPI/releases
-8. Run and enjoy! 👍
+6. Add ZastavkaAPI to the mod folder for the instance: https://modrinth.com/mod/zastavkaapi
+7. (Optional) Add Mod Menu to the mod folder for the instance: https://modrinth.com/mod/modmenu-beta
+8. Add this mod to the mod folder for the instance: https://github.com/telvarost/SameOldSpells-StationAPI/releases
+9. Run and enjoy! 👍
 
 ## Feedback
 

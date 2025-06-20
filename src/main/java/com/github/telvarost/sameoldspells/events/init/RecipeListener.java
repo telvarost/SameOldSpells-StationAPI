@@ -33,6 +33,12 @@ public class RecipeListener {
                     CraftingRegistry.addShapelessRecipe(new ItemStack(Block.FIRE.asItem() , 3) , Item.FLINT_AND_STEEL);
                 }
 
+                if (Config.config.RECIPES_CONFIG.enableIceCrafting) {
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(Block.ICE.asItem() , 1) , Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET);
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(Block.ICE.asItem() , 2) , Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET, Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET);
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(Block.ICE.asItem() , 3) , Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET, Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET, Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET);
+                }
+
                 if (Config.config.RECIPES_CONFIG.fireSpellUsesFlintAndSteel) {
                     for (int i = 1; i <= 3; i++) {
                         var vessels = new ArrayList<Object>(Collections.nCopies(i, SPELL_VESSEL));
@@ -41,6 +47,12 @@ public class RecipeListener {
                     }
                 } else {
                     CraftingRegistry.addShapelessRecipe(new ItemStack(FIRE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.FIRE);
+                }
+
+                if (Config.config.RECIPES_CONFIG.iceSpellUsesSnowAndWater) {
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(ICE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.SNOW_BLOCK, Block.SNOW_BLOCK, Item.WATER_BUCKET);
+                } else {
+                    CraftingRegistry.addShapelessRecipe(new ItemStack(ICE_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.ICE);
                 }
 
                 CraftingRegistry.addShapelessRecipe(new ItemStack(DARK_SPELL.asItem() , 1) , new ItemStack(SPELL_VESSEL.asItem(), 1), Block.OBSIDIAN);
