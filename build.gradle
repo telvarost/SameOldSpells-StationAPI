@@ -117,7 +117,9 @@ dependencies {
 		transitive false
 	}
 
-	modImplementation files("lib/ZastavkaAPI-1.0.2.jar")
+	modImplementation ("maven.modrinth:zastavkaapi:${project.zastavkaapi_version}") {
+		transitive false
+	}
 }
 
 processResources {

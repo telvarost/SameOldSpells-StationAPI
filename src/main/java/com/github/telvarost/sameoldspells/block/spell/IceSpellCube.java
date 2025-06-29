@@ -78,7 +78,7 @@ public class IceSpellCube extends TemplateBlock {
             int lastEventState = world.getBlockMeta(x, y, z);
             if (ModHelper.ModHelperFields.eventCounter != lastEventState) {
                 world.setBlockMeta(x, y, z, ModHelper.ModHelperFields.eventCounter);
-                ZastavkaHelper.setFrozen((LivingEntity)entity, 20);
+                ZastavkaHelper.setFrozen((LivingEntity)entity, 25);
             }
         }
     }
